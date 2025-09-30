@@ -1,0 +1,385 @@
+body {
+    background-color: white;
+    /* #151520 */
+    direction: rtl; 
+    font-family: 'Vazir', sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;         /* تغییر از height به min-height */
+    width: 100%;
+    box-sizing: border-box;
+    overflow-y: auto;          /* ✅ فقط اسکرول عمودی فعال شود */
+    overflow-x: hidden;        /* اگر نمیخوای اسکرول افقی داشته باشی */
+  }
+    #divHeader{
+      width: 100%;
+      height: 50px;
+      background-color: #3a8a3d;
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      position: relative;
+      direction: rtl;
+      font-family: 'Vazir',sans-serif;
+  
+    }
+    .menu-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+    
+    nav {
+      display: flex;
+      gap: 10px;
+    }
+    
+    .headerButton{
+      background-color: rgba(255, 255, 255, 0);
+      color: #ffffff;
+      margin: 5px 0px 0px 25px;
+      width:80px;
+      height:40px ;
+      border: none;
+      border-radius: 5px;
+      text-align: center;
+  
+  
+    }
+    .menu-toggle {
+      display: none;
+      font-size: 28px;
+      color: white;
+      cursor: pointer;
+      margin-left: 15px;
+      user-select: none;
+    }
+    /* برای تبلت و کوچکتر (عرض کمتر از 768px) */
+  @media screen and (max-width: 768px) {
+    .container {
+      width: 90%;
+      margin: 30px auto;
+      padding: 20px;
+    }
+  
+    .headerButton {
+      padding: 8px 12px;
+      font-size: 14px;
+    }
+  
+    #toggleBtn {
+      font-size: 16px;
+      top: 10px;
+      left: 10px;
+    }
+  }
+  
+  /* برای موبایل (عرض کمتر از 480px) */
+  @media screen and (max-width: 320px) {
+    .button-container {
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    .btn {
+      width: 100%;
+    }
+  
+    .headerButton {
+      display: block;
+      width: 100%;
+      margin: 5px 0;
+    }
+  
+    #divHeader {
+      padding: 15px 0;
+    }
+  }
+  /* حالت موبایل */
+  @media (max-width: 768px) {
+    nav {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 50px;
+      right: 0;
+      background-color: #3a8a3d;
+      padding: 10px;
+      border-radius: 10px;
+      z-index: 999;
+      box-shadow: 0 0 10px #333;
+    }
+  
+    nav.show {
+      display: flex;
+    }
+  
+    .menu-toggle {
+      display: block;
+      position: absolute;
+      top: 10px;
+      right: 10px;
+    }
+  
+    #divHeader {
+      justify-content: flex-start;
+    }
+  
+    .menu-container {
+      width: 100%;
+      justify-content: flex-end;
+    }
+  }
+  
+    .theme-btn-wrapper {
+      display: flex;
+      justify-content: flex-end;
+      padding: 10px 20px;
+    }
+    
+    #themeToggle {
+      background-color: #3a8a3d00;    
+      color: white;
+      border: none;
+      padding: 10px 6px;
+      border-radius: 27px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      position: absolute;
+    }
+  
+    #userPhotos{
+      width: 155px;
+      height: 155px;
+      /* border-radius: 100%; */
+      margin: -21px 91px 0px 0px;
+      display: inline-block;
+      
+    }
+  
+    .container {
+      width: 100%;
+      max-width: 350px;
+      margin: 0 auto;
+      padding: 20px;
+      border-radius: 27px;
+      background-color: #cecece;
+      animation: slideIn 1s ease;
+      text-align: right;
+      box-shadow: 4px 4px 20px rgb(100, 99, 99);
+    }
+    label {
+      margin-top: -10px;
+      margin-bottom: -7px;
+      display: block;
+      font-size: 16px;
+      padding: 1%;
+    }
+    input {
+      width: 105%;
+      padding: 20%;
+      margin:10px 0px 0px 0px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      display: flex;
+      text-align: right;
+      direction: rtl;
+      font-size: 16px;
+    }
+    .input-container {
+      position: relative;
+      margin-bottom: 15px;
+      width: 300px;
+      height: 50px;
+    }
+    
+    .input-container .icon {
+      position: absolute;
+      top: 45%;
+      right: 10px;
+      transform: translateY(-50%);
+      color: gray;
+      text-align: center;
+    }
+    .input-container input {
+      width: 100%;
+      padding: 10px 30px 10px 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      direction: rtl;
+      font-size: 16px;
+      font-family: 'Vazir',sans-serif;
+    }
+    /* استالی دهی های سایت های confirm1 و همچنین سایت password */
+     #phone{
+      width: 100%;
+      text-align: right;
+      margin-right: -5px;
+      padding: 10px 30px 10px 13px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 15px;
+      font-family: 'Vazir',sans-serif;
+      box-sizing: border-box;
+     }
+     .phone-container {
+      display: flex;
+      align-items: center;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      width: 300px;
+      padding: 0 10px; 
+
+       position: relative;
+      margin-bottom: 15px;
+      width: 300px;
+      /* height: 50px;  */
+    }
+    
+    .phone-container .icon {
+      position: absolute;
+      top: 55%;
+      right: 15px;              /* فاصله از لبه راست */
+      transform: translateY(-50%);
+      color: gray;
+      pointer-events: none;     /* تا روی input کلیک خراب نشه */
+      z-index: 2;  
+    }
+    #enter{
+      width: 168px;
+      padding: 10px 12px 11px 10px;
+      margin:10px 0px 10px 0px;
+      background-color: #4CAF50;
+      color: #edebe1;
+      border: none;
+      border-radius: 27px;
+      cursor: pointer;
+      font-size: 16px;
+      display: inline-block;
+      font-family: 'Vazir',sans-serif ;
+    }
+/* و اینجا هم تمام میشه */
+/* استایل دهی سایت dashboard */
+
+/* و تمام */
+    .toggle-password {
+      position: absolute;
+      top: 50%;
+      left: -10px;
+      transform: translateY(-50%);
+      cursor: pointer;
+      font-size: 18px;
+      color: #888;
+    }
+    #pLink{
+      width: 150px;
+      height: 50px;
+       margin-top: -80px;
+      margin-bottom: -50px; 
+      display: inline-block;
+      color: blue;
+    }
+     a{
+      width: 150px;
+      height: 50px;
+      display: inline-block;
+    }
+    .button-container {
+      display: flex;
+      justify-content: space-between; /* یکی چپ یکی راست */
+      align-items: center;
+      width: 100%;
+      padding: 0px 1px 0px 10px;
+      gap:10px;
+      font-family: 'Vazir',sans-serif ;
+  
+    }
+    #creatUser{
+      width: 168px;
+      padding: 10px 12px 11px 10px;
+      margin:10px 0px 10px 0px;
+      background-color: #4caf4f00;
+      color: #525050;
+      border: none;
+      border-radius: 27px;
+      cursor: pointer;
+      font-size: 16px;
+      display: inline-block;
+      font-family: 'Vazir',sans-serif;
+    }
+  
+    
+  
+  
+   #button {
+      width: 168px;
+      padding: 10px 12px 11px 10px;
+      margin:10px 0px 10px 0px;
+      background-color: #4CAF50;
+      color: #edebe1;
+      border: none;
+      border-radius: 27px;
+      cursor: pointer;
+      font-size: 16px;
+      display: inline-block;
+      font-family: 'Vazir',sans-serif ;
+  
+  
+    }
+    #submitBtn{
+      width: 168px;
+      padding: 10px 12px 11px 10px;
+      margin:10px 0px 10px 0px;
+      background-color: #4CAF50;
+      color: #edebe1;
+      border: none;
+      border-radius: 27px;
+      cursor: pointer;
+      font-size: 16px;
+      display: inline-block;
+      font-family: 'Vazir',sans-serif ;
+  
+    }
+
+  
+  
+    #errorMsg{
+      color: red;
+    }
+    #creatUser:hover {
+      background-color: #afafafa2;
+      color: rgb(0, 0, 0);
+      
+    }
+  
+    #button:hover {
+      background-color: #337c36;
+    }
+    .headerButton:hover {
+      background-color: #1e5f1e;
+    } 
+    #pLink:active {
+      color:red ;
+    }  
+    /* حالت روشن */
+  body.light-mode {
+    background-color: #edebe1;
+    color: #edebe1;
+  }
+  
+  body.light-mode .container {
+    background-color: #545455;
+    color: #ffffff;
+    box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.671);
+  }
+  body.light-mode .headerButton {
+    color: #edebe1
+  }
+  body.light-mode #creatUser {
+    color: #edebe1;
+  }
+  #themeToggle:hover{
+    background-color: #2b662b;
+  }
+  
