@@ -1,4 +1,5 @@
 <?php
+use Illuminate\Support\Facades\Route;
 Route::get('/', function ()  {
     return view ('index');
 });
@@ -17,7 +18,7 @@ Route::get('/confirmpassword', function () {
 
 Route::get('/NewTextDocument', function () {
   return view('New Text Document');
-})->name('New Text Document');
+})->name('NewTextDocument');
 
 // Route::get('/confirmpassword', function () {
 //   return view('confirmpassword');
